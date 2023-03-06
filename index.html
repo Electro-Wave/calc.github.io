@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>calculator</title>
+</head>
+<body class="page">
+    <div class="gr-container">
+        <section class="calculator">
+            <form action="" class="calculator-from">
+                <fieldset class="calculator-form__type-video">
+                    <label for="select-video" class="label">
+                        <h3 class="form__label">Тип видео</h3>
+                        <div class="select-wrapper">
+                            <select name="type-video" id="select-video" class="consultation-form__select" data-price=38000>
+                                <option value="Рекламный ролик">Рекламный ролик</option>
+                                <option value="Имиджевый ролик">Имиджевый ролик</option>
+                                <option value="Промо ролик">Промо ролик</option>
+                                <option value="Корпоративный ролик">Корпоративный ролик</option>
+                                <option value="Видеоинструкцию">Видеоинструкция</option>
+                                <option value="Видеообзор">Видеообзор </option>
+                                <option value="Онлайн курс">Онлайн курсы</option>
+                                <option value="Презентационный ролик">Презентационный ролик</option>
+                            </select>
+                        </div>  
+                    </label>
+                </fieldset>
+                <fieldset class="calculator-form__duration-range">
+                    <div class="range">
+                        <div class="range__descr"> 
+                            <h3 class="range__text">Хронометраж</h3>
+                            <span class="output">15 секунд</span></div>
+                        <label>
+                            <input type="hidden" name="duration-time" value=0 class="hidden-duration">
+                            <input type="range" id="duration-range" min="0" max="7" step="1"value= "0">
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="calculator-form__type-rolik">
+                    <h3 class="form__label">Тип ролика</h3>
+                    <label  class="radio">
+                        <input type="radio" name="type-rolik" value="Съемка" class="unvisible-radio"checked>
+                        <span class="visible-radio">Видео ролик</span>
+                    </label>
+                    <label  class="radio">
+                        <input type="radio" name="type-rolik" value="Анимация " class="unvisible-radio">
+                        <span class="visible-radio">Анимационный ролик</span>
+                    </label>
+                </fieldset>
+                <fieldset class="caclulation-form__fast">
+                    <div class="caclulation-form__checkbox"> 
+                        <span class="checkbox-label">Срочно</span>
+                        <span class="switch">
+                            <input type="checkbox" name="scenario" value="да" data-price=1.2>
+                            <label for="switcher"></label>
+                        </span>
+                    </div>
+                </fieldset>
+                <fieldset class="calculator-form__other-parametres">
+                    <div class="caclulation-form__checkbox"> 
+                        <span class="checkbox-label">Сценарий</span>
+                        <span class="switch">
+                            <input type="checkbox" name="scenario" value="да" data-price=10000>
+                            <label for="switcher"></label>
+                        </span>
+                    </div>
+                    <div class="caclulation-form__checkbox"> 
+                        <span class="checkbox-label">Диктор</span>
+                        <span class="switch">
+                            <input type="checkbox" name="dictors" value="да"data-price=5000>
+                            <label for="switcher"></label>
+                        </span>
+                    </div>
+                    <div class="caclulation-form__checkbox"> 
+                        <span class="checkbox-label ">Локация</span>
+                        <span class="switch">
+                            <input type="checkbox"  name="location" value="да"data-price=3000>
+                            <label for="switcher"></label>
+                        </span>
+                    </div>
+                    <div class="caclulation-form__checkbox"> 
+                        <span class="checkbox-label">Актеры модели</span>
+                        <span class="switch">
+                            <input type="checkbox" name="actors" value="да"data-price=5000>
+                            <label for="switcher"></label>
+                        </span>
+                    </div>
+                </fieldset>
+            </form>
+            <h2 class="title-price">
+            </h2>
+
+        </section>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

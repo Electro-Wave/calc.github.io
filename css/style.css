@@ -1,0 +1,405 @@
+
+@import url('./fonts.css');
+
+
+
+.page {
+    background: #F4F4F4;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+.gr-container {
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+
+}
+
+.calculator-form__other-parametres,
+.calculator-form__type-video,
+.calculator-form__type-rolik,
+.calculator-form__duration-range {
+    margin-bottom: 40px;
+}
+
+/* .calculator-form__type-video {
+    width: 50%;
+} */
+
+.calculator-form__duration-range {
+    display:grid;
+    grid-template-columns: 100%;
+}
+
+.calculator {
+    background:#F4F4F4;
+    min-height: 400px;
+    padding: 60px 5px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.range {
+    display: flex;
+    flex-direction: column;
+}
+
+.range__text {
+    font-weight: 600;
+    font-size: 16px;
+    color: #101010;
+}
+
+.output {
+    font-weight: 500;
+    font-size: 14px;
+    color: #101010;
+    margin-left: auto;
+}
+
+
+.range__descr {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: baseline;
+}
+
+
+fieldset {
+    border:none;
+}
+
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #D9D9D9;
+    height: 2px;
+    border-radius: 20px;
+}
+
+input[type="range"]::-moz-slider-runnable-track {
+    background: #D9D9D9;
+    height: 2px;
+    border-radius: 20px;
+
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+
+}
+
+input[type="range"]:focus {
+    outline: none;
+
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    background: #F5C400;
+    border: 1px solid #828282;
+    border-radius: 10px;
+    margin-top: -10px;
+
+
+}
+
+input[type="range"]::-moz-slider-thumb {
+    width: 20px;
+    height: 20px;
+    background: #F5C400;
+    border: 1px solid #828282;
+    border-radius: 10px;
+    margin-top: -10px;
+}
+
+
+input[type="range"]:focus::-webkit-slider-thumb {
+ 
+    outline: none;
+    outline-offset: none;
+  }
+  
+
+  input[type="range"]:focus::-moz-range-thumb {
+  
+    outline: none;
+    outline-offset: none;     
+  }
+  .select-wrapper {
+    position: relative;
+  }
+
+
+  
+  .consultation-form__select {
+    width: 100%;
+    height: 40px;
+    background: #F4F4F4;
+    border: 1px solid #D9D9D9;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    position: relative;
+    transition: 0.5s ease-in-out all;
+    padding: 10px 15px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #101010;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .consultation-form__select:hover {
+    border-color: #F5C400;;
+  }
+
+  .consultation-form__select:focus {
+    border-color: #F5C400;;
+  }
+
+  .consultation-form__select:active {
+    border-color: #F5C400;;
+  }
+
+  .select-wrapper::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 4px);
+    right: 15px;
+    width: 14px;
+    height: 8px;
+    background-image: url('../arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+
+.unvisible-radio {
+    position: absolute;
+    overflow: hidden;
+    clip-path:inset(0 0 0 0);
+    width: 1px;
+    height: 1px;
+}
+
+.visible-radio {
+    background: #101010;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: .1em;
+    padding: 0.8rem 0.6rem;
+    cursor: pointer;
+    color: #ffff;
+    transition: background 0.2s linear;
+    margin-right: 20px;
+}
+
+.radio:last-child > .visible-radio{
+    margin-right: 0;
+}
+
+.unvisible-radio:checked + .visible-radio {
+    background: #F5C400;
+}
+
+
+.unvisible-radio:focus + .visible-radio {
+  border: none;
+}
+
+.unvisible-radio:disabled + .visible-radio {
+    background: #F5C400;;
+    cursor: none;
+
+}
+
+.switch {
+    position: relative;
+    width: 80px;
+    height: 25px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.switch input {
+    appearance: none;
+    width: 80px;
+    height: 25px;
+    border-radius: 10px;
+    background: #101010;
+    outline: none;
+}
+
+
+
+.switch input::before,
+.switch input::after {
+    z-index: 2;
+    position: absolute;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    color: #ffff;
+    transform: translateY(-50%);
+    top: 50%
+    
+}
+
+.switch input::before {
+      content: "Да";
+      Left: 9px;
+}
+
+
+.switch input::after {
+    content: "Нет";
+    right: 7px;
+
+}
+
+/* .switch input:checked {
+    background: #F5C400;
+
+} */
+
+.switch label {
+    z-index: 1;
+    position: absolute;
+    top: 5px;
+    border-radius: 7px;
+    height: 16px;
+    width: 40px;
+}
+
+.switch input {
+    transition: 0.25s;
+    position: relative;
+}
+
+.switch input:checked+label
+{
+    left: 2px;
+    right: 121px;
+    background: #F5C400;
+    transition: left 0.5s, right 0.4s 0.2s;
+
+}
+    
+.title-price {
+    font-weight: 500;
+    font-size: 22px;
+
+}
+
+
+.form__label {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #101010;
+    margin-bottom:20px;
+}
+
+.caclulation-form__fast {
+    margin-bottom: 40px;
+}
+.calculator-form__other-parametres {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.caclulation-form__checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label {
+    margin-right: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #101010;
+
+   
+}
+
+/* .switch input:not(:checked)
+{
+    background:red;
+    transition: background 0.4s;
+}
+
+.switch input:not(:checked)::before
+{
+    color:red;
+    transition: background 0.4s;
+}
+
+.switch input:not(:checked)::before
+{
+    color:green;
+    transition: background 0.4s;
+} */
+
+.switch input:not(:checked)+label {
+    left: 38px;
+    right: 5px;
+    background: #F5C400;
+    transition: left 0.5s, right 0.4s 0.2s;
+    
+
+}
+
+
+@media (max-width: 576px) {
+    .calculator-form__other-parametres {
+        grid-template-columns: repeat(2, 1fr);
+    }
+     .calculator-form__type-rolik .radio:nth-child(2) .visible-radio{
+        margin-bottom: 20px;
+    }
+    .title-price {
+        font-size: 18px;
+    }
+    .calculator-form__other-parametres {
+    column-gap: 10px;
+    }
+    .checkbox-label {
+        font-size: 12px;
+    }
+    .visible-radio {
+        font-size: 12px;
+    }
+    .form__label, .range__text {
+        font-size: 14px;
+    } 
+}
