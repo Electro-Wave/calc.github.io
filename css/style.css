@@ -388,6 +388,7 @@ input[type="range"]:focus::-webkit-slider-thumb {
         margin-bottom: 20px;
     }
     .title-price {
+        text-align: center;
         font-size: 18px;
     }
     .calculator-form__other-parametres {
